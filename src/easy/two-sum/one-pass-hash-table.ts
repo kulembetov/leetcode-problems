@@ -1,5 +1,5 @@
-// time complexity: O(n) - because we traverse the list containing n elements only once.
-// space complexity: O(n) - because the extra space required depends on the number of items stored in the hash table, which stores at most n elements.
+// time complexity: O(n) - because we traverse the list containing n elements only once
+// space complexity: O(n) - because the extra space required depends on the number of items stored in the hash table, which stores at most n elements
 
 const twoSumOnePassHashTable = (nums: number[], target: number): number[] => {
   const map: Map<number, number> = new Map();

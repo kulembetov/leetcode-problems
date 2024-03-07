@@ -1,5 +1,5 @@
-// time complexity: O(n^2) - because we're using two nested loops.
-// space complexity: O(1) - because we're not using any extra data structures that grow with input size.
+// time complexity: O(n^2) - because we're using two nested loops
+// space complexity: O(1) - because we're not using any extra data structures that grow with input size
 
 const twoSumBruteForce = (nums: number[], target: number): number[] => {
   for (let i = 0; i < nums.length; i++) {
