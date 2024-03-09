@@ -2,7 +2,7 @@
 // space Complexity: O(n), as we're using an object to track occurrences
 
 const findDuplicatesObj = (nums: number[]): boolean => {
-  const seen = new Object();
+  const seen: Record<number, boolean> = {};
   for (let i = 0; i < nums.length; i++) {
     if (seen[nums[i]]) {
       return true;
