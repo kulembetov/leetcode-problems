@@ -26,7 +26,7 @@ const isValidSudoku = (board: string[][]): boolean => {
         const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
         // validate the number against current row, column, and box
         if (rows[i].has(num) || cols[j].has(num) || boxes[boxIndex].has(num)) {
-           // duplicate found, invalid board
+          // duplicate found, invalid board
           return false;
         }
         // add number to sets if not already present
@@ -36,6 +36,6 @@ const isValidSudoku = (board: string[][]): boolean => {
       }
     }
   }
-   // no duplicates found, valid board
+  // no duplicates found, valid board
   return true;
 };
