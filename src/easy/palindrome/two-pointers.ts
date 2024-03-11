@@ -14,4 +14,4 @@ const isPalindrome = (s: string): boolean => {
     right--;
   }
   return true;
-}
+};

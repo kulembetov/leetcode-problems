@@ -5,4 +5,4 @@ const isPalindromeReverse = (s: string): boolean => {
   const reversedStr = str.split("").reverse().join("");
 
   return str === reversedStr;
-}
+};
