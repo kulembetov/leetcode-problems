@@ -27,4 +27,4 @@ const longestConsecutiveSet = (nums: number[]): number => {
   }
   // return the longest streak
   return longestSreak;
-}
+};
