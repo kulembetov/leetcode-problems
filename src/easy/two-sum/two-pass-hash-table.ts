@@ -6,10 +6,10 @@ const twoSumTwoPassHashTable = (nums: number[], target: number): number[] => {
   nums.forEach((num, i) => map.set(num, i));
 
   for (let i = 0; i < nums.length; i++) {
-      const complement = target - nums[i];
-      if (map.has(complement) && map.get(complement) !== i) {
-          return [i, map.get(complement)!];
-      }
+    const complement = target - nums[i];
+    if (map.has(complement) && map.get(complement) !== i) {
+      return [i, map.get(complement)!];
+    }
   }
   return [];
-}
+};

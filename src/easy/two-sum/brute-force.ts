@@ -10,4 +10,4 @@ const twoSumBruteForce = (nums: number[], target: number): number[] => {
     }
   }
   return [];
-}
+};
