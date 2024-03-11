@@ -9,12 +9,11 @@ the array converted from the map the frequency map will store at most n elements
 are unique, and converting this map to an array for sorting also requires space proportional to n
 */
 
-
 const topKFrequent = (nums: number[], k: number): number[] => {
   const frequencyMap = new Map<number, number>();
 
   nums.forEach((num) =>
-    frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1)
+    frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1),
   );
 
   return Array.from(frequencyMap)
