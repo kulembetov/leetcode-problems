@@ -3,7 +3,7 @@
 const threeSum = (nums: number[]): number[][] => {
   nums.sort((a, b) => a - b);
 
-  const result = [];
+  const result: number[][] = [];
 
   for (let i = 0; i < nums.length; i++) {
     // skip duplicate for the first element of the triplet
