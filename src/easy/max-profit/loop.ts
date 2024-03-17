@@ -14,3 +14,5 @@ const maxProfit = (prices: number[]): number => {
   }
   return maxProfit;
 };
+
+export default maxProfit;

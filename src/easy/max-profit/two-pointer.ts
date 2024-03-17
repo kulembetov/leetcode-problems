@@ -14,3 +14,5 @@ const maxProfitPointer = (prices: number[]): number => {
   }
   return maxProfit;
 };
+
+export default maxProfitPointer;
