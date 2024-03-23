@@ -15,7 +15,7 @@ const groupAnagramsMap = (strs: string[]): string[][] => {
   // iterate through each string in the input array
   for (const str of strs) {
     // sort the characters of the string to form a key
-    const key = str.split("").sort().join("");
+    const key = str.split('').sort().join('');
 
     if (map.has(key)) {
       // if the key exists, append the current string to its group

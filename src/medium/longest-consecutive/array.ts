@@ -7,7 +7,7 @@ const longestConsecutiveArray = (nums: number[]): number => {
 
   // sort the array to bring consecutive elements together
   const sortedArray: number[] = nums.sort(
-    (a: number, b: number): number => a - b,
+    (a: number, b: number): number => a - b
   );
   // to store the length of the longest sequence found
   let max: number = 0;

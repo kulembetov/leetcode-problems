@@ -36,12 +36,17 @@ const goodTriplets = (nums1: number[], nums2: number[]): number => {
   const indexInNums2 = new Map(nums2.map((num, index) => [num, index]));
 
   // increment the value in the segment tree at the given index.
-  function update(index: number, updateIndex: number, start = 0, end = n - 1): void {
+  function update(
+    index: number,
+    updateIndex: number,
+    start = 0,
+    end = n - 1
+  ): void {
     if (start === end) {
       segmentTree[index]++;
       return;
     }
-    
+
     // equivalent to Math.floor((start + end) / 2)
     const mid = (start + end) >> 1;
     if (updateIndex <= mid) {
@@ -53,29 +58,36 @@ const goodTriplets = (nums1: number[], nums2: number[]): number => {
   }
 
   // query the sum in the range [queryStart, queryEnd]
-  const query = (index: number, queryStart: number, queryEnd: number, start = 0, end = n - 1): number => {
+  const query = (
+    index: number,
+    queryStart: number,
+    queryEnd: number,
+    start = 0,
+    end = n - 1
+  ): number => {
     if (queryEnd < start || queryStart > end) return 0;
     if (queryStart <= start && end <= queryEnd) return segmentTree[index];
-    
+
     const mid = (start + end) >> 1;
     const left = query(index * 2, queryStart, queryEnd, start, mid);
     const right = query(index * 2 + 1, queryStart, queryEnd, mid + 1, end);
     return left + right;
-  }
+  };
 
   // start by updating the segment tree with the first element of nums1
   update(1, indexInNums2.get(nums1[0])!);
-  
+
   for (let i = 1; i < n; i++) {
     const indexInB = indexInNums2.get(nums1[i])!;
     const commonElementsOnLeft = query(1, 0, indexInB);
     const uniqueElementsOnLeftInA = i - commonElementsOnLeft;
     const elementsAfterIndexInB = n - indexInB - 1;
-    const commonElementsOnRight = elementsAfterIndexInB - uniqueElementsOnLeftInA;
-    
+    const commonElementsOnRight =
+      elementsAfterIndexInB - uniqueElementsOnLeftInA;
+
     ans += commonElementsOnLeft * commonElementsOnRight;
     update(1, indexInB);
   }
-  
+
   return ans;
-}
+};

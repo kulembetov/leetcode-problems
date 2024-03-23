@@ -16,11 +16,11 @@ const groupAnagramsCharCount = (strs: string[]): string[][] => {
     const count = new Array(26).fill(0);
     for (const char of str) {
       // increment the count for the current character
-      count[char.charCodeAt(0) - "a".charCodeAt(0)]++;
+      count[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
     }
 
     // create a key from the count array by joining its elements with a separator
-    const key = count.join("#");
+    const key = count.join('#');
 
     // if the key doesn't exist in the map, initialize the value as an empty array
     if (!map[key]) {

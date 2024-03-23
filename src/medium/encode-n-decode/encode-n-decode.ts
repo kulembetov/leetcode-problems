@@ -1,12 +1,12 @@
 // time complexity: O(n), n = total characters in all strings
 // space complexity: O(n), for the encoded string
 const encode = (strs: string[]): string => {
-  let encodedString = "";
+  let encodedString = '';
 
   // iterate through each string in the array
   for (let str of strs) {
     // append length, separator, string, and comma
-    encodedString += str.length + "|" + str + ",";
+    encodedString += str.length + '|' + str + ',';
   }
   // remove the last comma for a cleaner format
   return encodedString.slice(0, -1);
@@ -22,7 +22,7 @@ const decode = (s: string): string[] => {
   // loop until the end of the encoded string
   while (i < s.length) {
     // find the next separator to determine the end of the length segment
-    let separatorIndex = s.indexOf("|", i);
+    let separatorIndex = s.indexOf('|', i);
     if (separatorIndex !== -1) {
       // parse the length of the next string
       let length = parseInt(s.substring(i, separatorIndex));
