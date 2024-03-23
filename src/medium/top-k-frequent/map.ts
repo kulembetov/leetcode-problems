@@ -13,7 +13,7 @@ const topKFrequent = (nums: number[], k: number): number[] => {
   const frequencyMap = new Map<number, number>();
 
   nums.forEach((num) =>
-    frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1),
+    frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1)
   );
 
   return Array.from(frequencyMap)

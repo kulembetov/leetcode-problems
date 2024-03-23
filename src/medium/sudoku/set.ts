@@ -21,7 +21,7 @@ const isValidSudoku = (board: string[][]): boolean => {
     for (let j = 0; j < 9; j++) {
       const num = board[i][j]; // current cell value
       // check if the cell is not empty
-      if (num !== ".") {
+      if (num !== '.') {
         // calculate box index based on cell position
         const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
         // validate the number against current row, column, and box
