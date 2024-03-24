@@ -1,5 +1,5 @@
-// time Complexity: O(n), iterate through the array once
-// space Complexity: O(n), as we're using an object to track occurrences
+// time complexity: O(n), iterate through the array once
+// space complexity: O(n), as we're using an object to track occurrences
 
 const findDuplicatesObj = (nums: number[]): boolean => {
   const seen: Record<number, boolean> = {};
