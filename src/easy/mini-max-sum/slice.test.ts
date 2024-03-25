@@ -9,9 +9,9 @@ describe('miniMaxSumSlice', () => {
   });
 
   it('should log min and max sum correctly for an array with the same numbers', () => {
-    const consoleSpy = jest.spyOn(console, "log");
-    const arr = [1, 1, 1, 1, 1]
+    const consoleSpy = jest.spyOn(console, 'log');
+    const arr = [1, 1, 1, 1, 1];
     miniMaxSumSlice(arr);
     expect(consoleSpy).toHaveBeenCalledWith(4, 4);
-  })
+  });
 });
