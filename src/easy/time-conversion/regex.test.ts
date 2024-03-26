@@ -8,10 +8,7 @@ describe('time conversion', () => {
   });
 
   it('should handle the incorrect time format and throw an error', () => {
-    const timeConversion = (timeStr: string) => {
-      throw new TypeError('Invalid time format');
-    };
-    expect(() => timeConversion('10:34:56')).toThrow(TypeError);
-    expect(() => timeConversion('10:34:56')).toThrow('Invalid time format');
+    expect(() => timeConversion('10:34:56')).toThrow(Error);
+    expect(() => timeConversion('10:34:56')).toThrow('Invalid string format');
   });
 });
