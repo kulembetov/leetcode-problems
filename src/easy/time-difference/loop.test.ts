@@ -8,7 +8,9 @@ describe('findTimeDifference', () => {
   });
 
   it('should throw an error when the input string is invalid', () => {
-    expect(() => findTimeDifference('12:12:12', '12:12:12')).toThrow('Invalid string format');
+    expect(() => findTimeDifference('12:12:12', '12:12:12')).toThrow(
+      'Invalid string format'
+    );
     expect(() => findTimeDifference('12:12:12', '12:12:12')).toThrow(Error);
   });
 });
