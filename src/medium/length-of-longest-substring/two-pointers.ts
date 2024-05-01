@@ -1,4 +1,5 @@
-// return the length of the longest substring with no duplicates in a row
+// time complexity: O(n), as each character is processed at most twice
+// space complexity: O(n), due to the set storing up to n characters
 
 export const lengthOfLongestSubstring = (s: string): number => {
   // initialize left, right, maxLength variables to zero
@@ -24,6 +25,5 @@ export const lengthOfLongestSubstring = (s: string): number => {
     }
   }
 
-  // return the maximum length found
   return maxLength;
 };
