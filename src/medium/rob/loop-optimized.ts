@@ -10,19 +10,19 @@ export const robOptimized = (nums: number[]): number => {
   if (nums.length === 2) return Math.max(nums[0], nums[1]);
 
   // initialize variables to keep track of the maximum money that can be robbed
-  let prev1 = Math.max(nums[0], nums[1]);
-  let prev2 = nums[0];
-  let current = prev1;
+  let maxRobPrevious = Math.max(nums[0], nums[1]);
+  let maxRobBeforePrevious = nums[0];
+  let maxRobCurrent = maxRobPrevious;
 
   // iterate over the array starting from the third house
   for (let i = 2; i < nums.length; i++) {
     // update current max considering the current house and the max before the last house
-    current = Math.max(prev1, prev2 + nums[i]);
+    maxRobCurrent = Math.max(maxRobPrevious, maxRobBeforePrevious + nums[i]);
     // shift previous values for the next iteration
-    prev2 = prev1;
-    prev1 = current;
+    maxRobBeforePrevious = maxRobPrevious;
+    maxRobPrevious = maxRobCurrent;
   }
 
   // return the maximum amount that can be robbed from all houses
-  return current;
+  return maxRobCurrent;
 };
