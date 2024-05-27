@@ -16,3 +16,6 @@ export const toCamelCase = (input: string): string => {
     })
     .join('');
 };
+
+// I-love-to-play-games =>
+// i-love-to-play-games
