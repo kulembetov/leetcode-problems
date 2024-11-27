@@ -8,11 +8,11 @@ export const findMedian = (arr: number[]): number => {
 
   arr.sort((a, b) => a - b);
 
-  const mid = Math.floor(arr.length % 2);
+  const mid = Math.floor(arr.length / 2);
 
   if (arr.length % 2 === 0) {
     // if even, average the two middle numbers
-    return arr[mid - 1] + arr[mid] / 2;
+    return (arr[mid - 1] + arr[mid]) / 2;
   } else {
     // if odd, return the middle number
     return arr[mid];
