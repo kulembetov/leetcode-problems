@@ -1,3 +1,6 @@
+// time complexity: O(n), because we iterate over the input array once
+// space complexity: O(n), because we store the result in a separate array
+
 export const range = (start: number, end: number, step: number): number[] => {
   if (step === 0) return [];
 
