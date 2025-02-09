@@ -20,4 +20,4 @@ export const maxAverageSubsequence = (nums: number[], k: number): number => {
   }
 
   return parseFloat((max / k).toFixed(2));
-}
+};

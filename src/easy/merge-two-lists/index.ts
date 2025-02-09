@@ -7,7 +7,10 @@ export class ListNode {
   }
 }
 
-export const mergeTwoLists = (list1: ListNode | null, list2: ListNode | null): ListNode | null => {
+export const mergeTwoLists = (
+  list1: ListNode | null,
+  list2: ListNode | null
+): ListNode | null => {
   let dummy = new ListNode();
   let current = dummy;
 
